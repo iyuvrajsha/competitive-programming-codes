@@ -1,0 +1,1 @@
+These codes are c++ codes of some questions from online coding contest or practices. Every code works properly.
