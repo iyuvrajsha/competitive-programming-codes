@@ -3,14 +3,17 @@ using namespace std;
 int f(string s)
 {
     unordered_map<char,int>m;
-    int ml= 0,msi=0;
-    for(int i=0;i<s.size();i++)
+    int ml= 0,msi=0,i=0,j=1;
+
+    while(i<s.size())
     {
         if(m[s[i]]!=0)
         {
             m.clear();
             msi=0;
-            i-=1;
+            i=j;
+            j++;
+            continue;
         }
         else
         {
@@ -18,6 +21,7 @@ int f(string s)
             msi++;
         }
     ml= max(ml,msi);
+    i++;
     }
     return ml;
 }
